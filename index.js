@@ -9,6 +9,7 @@ exports.register = function (plugin, options, next) {
   internals.verify = options.verify;
 
   plugin.auth.scheme('bearer', internals.scheme);
+  plugin.auth.strategy('bearer', 'bearer');
 
   next();
 };
